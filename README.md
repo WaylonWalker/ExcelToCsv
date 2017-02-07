@@ -1,7 +1,7 @@
 # ExcelToCsv
-A useful tool to convert excel spreadsheets to csv files without launching excel.  This works very well with large files that are slow to open in excel, or a large number of files at once.
+A python package to convert excel spreadsheets to csv files without launching excel.  This works very well with large files that include many tabs which makes Excel very slow to open.
 
 ## requirements
-Excel
+xlrd
 
 
