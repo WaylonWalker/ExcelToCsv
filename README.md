@@ -4,4 +4,18 @@ A python package to convert excel spreadsheets to csv files without launching ex
 ## requirements
 xlrd
 
+## Installation
 
+```
+git clone https://github.com/WaylonWalker/ExcelToCsv.git
+cd ./ExcelToCsv
+python setup.py install
+```
+
+## Usage
+
+```
+ExcelToCvs --verbose
+```
+
+![example](example.gif)
