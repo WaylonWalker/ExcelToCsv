@@ -1,10 +1,14 @@
-# ExcelToCsv
+ExcelToCsv
+==========
+
 A python package to convert excel spreadsheets to csv files without launching excel.  This works very well with large files that include many tabs which makes Excel very slow to open.
 
-## requirements
+requirements
+------------
 xlrd
 
-## Installation
+installation
+------------
 
 ```
 git clone https://github.com/WaylonWalker/ExcelToCsv.git
@@ -12,7 +16,9 @@ cd ./ExcelToCsv
 python setup.py install
 ```
 
-## Usage
+Usage
+-----
+
 ExcelToCsv [-h] [--input_file F [F ...]] [--output_file OUTPUT_FILE]
                   [--sheet SHEET] [--skiprows SKIPROWS] [--verbose]
 
@@ -33,12 +39,13 @@ optional arguments:
   
   --verbose             asks for all arguments when not passed
   
-## Example
+Example
+-------
 
 ```
 ExcelToCvs --verbose
 ```
 
-![example](example.gif)
+.. image:: example.gif
 
 
