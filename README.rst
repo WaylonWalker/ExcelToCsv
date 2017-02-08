@@ -10,11 +10,12 @@ xlrd
 installation
 ------------
 
-``
-git clone https://github.com/WaylonWalker/ExcelToCsv.git
-cd ./ExcelToCsv
-python setup.py install
-``
+.. code-block:: cmd
+
+  git clone https://github.com/WaylonWalker/ExcelToCsv.git
+  cd ./ExcelToCsv
+  python setup.py install
+
 
 Usage
 -----
