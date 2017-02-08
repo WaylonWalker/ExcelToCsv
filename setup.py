@@ -4,12 +4,12 @@ from setuptools import setup, find_packages
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
-with open('README.md') as f:
+with open('README.rst') as f:
     long_description = f.read()
 
 
 setup(name='ExcelToCsv',
-      version='0.1',
+      version='0.1.1',
       description='A python package to convert excel spreadsheets to csv files',
       long_description=long_description,
       url='https://github.com/WaylonWalker/ExcelToCsv',
