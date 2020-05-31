@@ -16,8 +16,7 @@ def get_sheet_from_input(sheets):
     sheet_choice = ''
     for i, val in enumerate(sheets):
         sheet_choice = sheet_choice + str(i + 1) + '. ' + val + '\n'
-    sheet_idx = int(input(sheet_choice)) - 1
-    return sheet_idx
+    return int(input(sheet_choice)) - 1
 
 
 def get_file_from_input(pattern='*.xl*'):
@@ -98,11 +97,7 @@ def console_tool():
     by Waylon S. Walker
 
                                                     ''')
-    if args.input_file:
-        input_file = args.input_file[0]
-    else:
-        input_file = get_file_from_input()
-
+    input_file = args.input_file[0] if args.input_file else get_file_from_input()
     if args.output_file:
         output_file = args.output_file
     else:
@@ -115,20 +110,12 @@ def console_tool():
     if args.skiprows:
         start = args.skiprows
     else:
-        if args.verbose:
-            start = int(input('skip first n rows: '))
-        else:
-            start = 0
-
+        start = int(input('skip first n rows: ')) if args.verbose else 0
     with xlrd.open_workbook(input_file) as wb:
         if args.sheet:
             sheet_idx = args.sheet - 1
         else:
-            if args.verbose:
-                sheet_idx = get_sheet_from_input(wb.sheet_names())
-            else:
-                sheet_idx = 0
-
+            sheet_idx = get_sheet_from_input(wb.sheet_names()) if args.verbose else 0
         print('converting %s' % wb.sheet_by_index(sheet_idx).name)
     ExcelToCsv(input_file, sheet_idx=sheet_idx, start=start,
                output_file=output_file)
